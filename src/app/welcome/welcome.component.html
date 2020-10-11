@@ -1,4 +1,14 @@
-<h1>Welcome page</h1>
+<h1>Searching for batman</h1>
 <a routerLink="about">About</a>
+
+<div class="grid grid-cols-5">
+    <div class="max-w-sm rounded overflow-hidden shadow-lg" *ngFor="let movie of movies">
+        <img class="w-full" [src]="movie.Poster" [alt]="movie.Title">
+        <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">{{ movie.Title }}</div>
+        </div>
+    </div>
+</div>
+
 <hr />
 <router-outlet></router-outlet>
