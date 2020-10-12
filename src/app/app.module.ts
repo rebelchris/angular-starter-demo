@@ -9,6 +9,7 @@ import { SecondComponent } from './second/second.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ChildComponent } from './child/child.component';
 import { AboutComponent } from './about/about.component';
+import { MaxLengthPipe } from './max-length.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AboutComponent } from './about/about.component';
     SecondComponent,
     NotFoundComponent,
     ChildComponent,
-    AboutComponent
+    AboutComponent,
+    MaxLengthPipe
   ],
   imports: [
     BrowserModule,
