@@ -14,7 +14,8 @@ export class WelcomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  
-  
+  getMessage(event) {
+    this.messageToSend = event;
+  }
 
 }
