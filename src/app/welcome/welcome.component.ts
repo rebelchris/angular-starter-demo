@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
+import { Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
   styleUrls: ['./welcome.component.scss']
 })
-export class WelcomeComponent implements OnInit {
+export class WelcomeComponent {
 
-  constructor() { }
+  ourForm = new FormGroup({
+    firstName: new FormControl('', Validators.required),
+    lastName: new FormControl(''),
+  });
 
-  ngOnInit(): void {
+  onSubmit() {
+    console.log(this.ourForm.value);
   }
 
 }

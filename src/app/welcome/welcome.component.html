@@ -2,3 +2,26 @@
 <a routerLink="about">About</a>
 <hr />
 <router-outlet></router-outlet>
+<hr />
+<form [formGroup]="ourForm" (ngSubmit)="onSubmit()" class="px-8 pt-6 pb-8 mb-4 bg-white rounded shadow-md">
+  
+  <label class="block mb-2 text-sm font-bold text-gray-700">
+    First Name:
+    <input type="text" formControlName="firstName" class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline">
+  </label>
+
+  <br />
+
+  <label class="block mb-2 text-sm font-bold text-gray-700">
+    Last Name:
+    <input type="text" formControlName="lastName" class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline">
+  </label>
+
+  <button type="submit" [disabled]="!ourForm.valid" class="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline">Submit</button>
+
+    <p>
+    Values: {{ ourForm.value | json }}<br />
+    Form valid: {{ ourForm.status }}
+    </p>
+
+</form>
