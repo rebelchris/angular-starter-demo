@@ -9,6 +9,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ChildComponent } from './child/child.component';
 import { AboutComponent } from './about/about.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +20,15 @@ import { ReactiveFormsModule } from '@angular/forms';
     SecondComponent,
     NotFoundComponent,
     ChildComponent,
-    AboutComponent
+    AboutComponent,
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

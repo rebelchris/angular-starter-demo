@@ -1,0 +1,39 @@
+<form
+  [formGroup]="loginForm"
+  (ngSubmit)="onSubmit()"
+  class="px-8 pt-6 pb-8 mb-4 bg-white rounded shadow-md"
+>
+  <div class="mb-4">
+    Username: eve.holt@reqres.in<br />
+    Password: cityslicka
+  </div>
+  <div class="form-group">
+    <label class="block mb-2 text-sm font-bold text-gray-700" for="username"
+      >Username</label
+    >
+    <input
+      type="text"
+      formControlName="username"
+      class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+    />
+  </div>
+  <div class="form-group">
+    <label
+      class="block mt-2 mb-2 text-sm font-bold text-gray-700"
+      for="password"
+      >Password</label
+    >
+    <input
+      type="password"
+      formControlName="password"
+      class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+    />
+  </div>
+  <button
+    [disabled]="!loginForm.valid"
+    class="px-4 py-2 mt-4 font-bold text-white bg-blue-500 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline"
+  >
+    Login
+  </button>
+  <div class="mt-2" *ngIf="error">* Error: {{ error.message }}</div>
+</form>
