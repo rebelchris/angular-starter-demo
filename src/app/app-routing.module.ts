@@ -7,6 +7,7 @@ import { ChildComponent } from './child/child.component';
 import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { AuthGuardService } from './guards/auth-guard.service';
 
 const routes: Routes = [
   { path: 'welcome', component: WelcomeComponent, children: [
@@ -17,7 +18,7 @@ const routes: Routes = [
     { path: 'child', component: ChildComponent }
   ] },
   { path: 'login', component: LoginComponent },
-  { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeComponent, canActivate: [AuthGuardService] },
   { path: '',   redirectTo: '/welcome', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent }
 ];
