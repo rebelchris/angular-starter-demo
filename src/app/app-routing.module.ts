@@ -15,6 +15,7 @@ const routes: Routes = [
     { path: 'child', component: ChildComponent }
   ] },
   { path: '',   redirectTo: '/welcome', pathMatch: 'full' },
+  { path: 'lazy', loadChildren: () => import('./lazy/lazy.module').then(m => m.LazyModule) },
   { path: '**', component: NotFoundComponent }
 ];
 
