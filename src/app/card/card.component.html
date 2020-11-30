@@ -1,0 +1,10 @@
+<div class="flex flex-row mb-5 overflow-hidden bg-white rounded-lg shadow-lg">
+  <div class="flex flex-col w-full p-6 text-dark-gray-600">
+    <div class="flex justify-between mb-4">
+      <span class="uppercase">{{ title }}</span>
+      <i *ngIf="icon">{{ icon }}</i>
+    </div>
+    <ng-content select="[body]"></ng-content>
+    <ng-content select="[footer]"></ng-content>
+  </div>
+</div>
