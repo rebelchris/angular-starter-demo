@@ -1,0 +1,11 @@
+<h1>List of people</h1>
+
+<form [formGroup]="searchForm">
+  <input formControlName="search" />
+</form>
+
+<ul>
+  <li *ngFor="let person of people | searchFilter: searchForm.value.search">
+    {{ person.firstname }} {{ person.lastname }}
+  </li>
+</ul>
