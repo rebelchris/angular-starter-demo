@@ -11,7 +11,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
     WelcomeComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule
   ],
   providers: [],
