@@ -9,7 +9,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ChildComponent } from './child/child.component';
 import { AboutComponent } from './about/about.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { CommonModule } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,14 +17,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     SecondComponent,
     NotFoundComponent,
     ChildComponent,
-    AboutComponent
+    AboutComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
