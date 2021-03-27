@@ -5,4 +5,13 @@
     <li><a routerLink="/welcome" routerLinkActive="active">Welcome</a></li>
   </ul>
 </nav>
+
+<div
+  (click)="color = !color"
+  class="p-8 m-8"
+  [ngClass]="[color ? 'bg-blue-500' : 'bg-purple-500']"
+>
+  Hi, I'm the div
+</div>
+
 <router-outlet></router-outlet>
